@@ -26,8 +26,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 x = np.array(eval(input()))
 y = np.array(eval(input()))
-2,9,5,5,3,7,1,8,6,2
-69,98,82,77,71,84,55,94,84,64
 x_mean = np.mean(x)
 y_mean = np.mean(y)
 num = 0
@@ -37,13 +35,9 @@ num += (x[i] - x_mean) * (y[i] - y_mean)
 denom += (x[i] - x_mean) ** 2
 m = num / denom
 b = y_mean - m * x_mean
-Start coding or generate with AI.
 print(m, b)
-4.742603550295859 55.035502958579876
 y_predicted = m * x + b
 print(y_predicted)
-[64.52071006 97.71893491 78.74852071 78.74852071 69.26331361 88.23372781
- 59.77810651 92.97633136 83.49112426 64.52071006]
 plt.scatter(x, y)
 plt.plot(x, y_predicted, color='red')
 plt.show()
